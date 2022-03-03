@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function acao() { 
+            const saude = parseInt(document.getElementById('vida').value)
+            const armadura = parseInt(document.getElementById('armadura').value)
+            const dano = parseInt(document.getElementById('dano').value)
+            const vidaMaxima = calculaVidaMaxima(saude, armadura)
+
+            alert(personagemMorreu(vidaMaxima, dano))
+        }
+
+        function calculaVidaMaxima(vida, armadura){
+            return vida + (armadura * 0.5)
+        }
+
+        function personagemMorreu(vidaMaxima, dano){
+            const vidaRestante = vidaMaxima - dano
+            if (vidaRestante <= 0 ){
+                return 'Personagem morreu'
+            } else {
+                return 'Personagem sobrevive restando ' + vidaRestante + ' pontos de vida'
+            }
+        }
+
+    </script>
+
+    <form>
+        <input type="text" placeholder="vida" id="vida">     
+        <input type="text" placeholder="armadura" id="armadura">     
+        <input type="text" placeholder="dano" id="dano">     
+        <input type="button" value="verificar" onclick="acao()">
+    </form>
+
+</body>
+</html>

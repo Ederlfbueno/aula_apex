@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var produtos = [];
+        // definição dos produtos em array (lista)
+        produtos[1] = { nome: "coxinha",
+                        preco: 10 };
+        produtos[2] = { nome: "bolinho de carne",
+                        preco:  8 };
+        produtos[3] = { nome: "fatia de pizza",
+                        preco: 15}
+
+        // codigo do produto que o cliente quer comprar (capturado na janela)
+        var codigoInformado = parseInt(prompt('Informe o código do produto'));
+        
+        // exibe o produto selecionado para o cliente
+        alert('O produto selecionado foi: ' + 
+              produtos[codigoInformado]["nome"] + 
+              ' o Preço é: ' + produtos[codigoInformado]["preco"]);
+
+        //captura o preço informado pelo cliente na janela
+        var precoInformado = parseInt(prompt('Informe o quanto será pago: '));
+
+        if (produtos[codigoInformado]["preco"] == precoInformado){
+            alert('preço informado corretamente')
+        } else {
+            alert('preço incorreto')
+        }
+
+    </script>
+</body>
+</html>

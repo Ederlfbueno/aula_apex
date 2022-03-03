@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nomes = ['Larriss', 'Hans', 'Joao', 'Richard', 'Patricia', 'Eder']
+        for(var indice=0; indice < nomes.length; indice++){
+
+            if (nomes[indice] == 'Eder') { 
+                nomes.splice(indice, 1)
+            } else if (nomes[indice] == 'Joao') {
+                nomes.splice(indice,2)
+            }
+            document.write(indice + ' ' + nomes[indice]  + '<br>' )
+        }
+        document.write(nomes)
+    </script>
+</body>
+</html>

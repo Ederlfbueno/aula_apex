@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+
+        var saude = 20;
+        var dano = 21; 
+        
+        if (personagemMorreu(dano, saude)) {
+            document.write("personagem morreu");
+        } else {
+            document.write("personagem sobreviveu");
+        } 
+
+        function personagemMorreu (dano, saude) {
+            if (dano >= saude) { 
+                return true; 
+            } else { 
+                return false;
+            }
+        } 
+    </script>
+</body>
+</html>

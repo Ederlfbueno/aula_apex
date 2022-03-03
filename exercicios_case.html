@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        let temperatura = parseInt(prompt('Informe a temperatura'))
+        let conversao = parseInt(prompt('Informe a conversão \n' + 
+                                 '1 - Celsius para Fahrenheit \n' + 
+                                 '2 - Fahrenheit para Celsius' ))
+        var resultado = 0
+/*   */
+        switch(conversao) { 
+            case 1:
+                resultado = temperatura * 1.8 + 32; 
+                document.write('A temperatura ' + temperatura + 
+                        ' convertida para Fahrenheit ficou ' + 
+                        resultado) 
+                break; 
+            case 2: 
+               resultado = (temperatura - 32) / 1.8; 
+                document.write('A temperatura ' + temperatura + 
+                        ' convertida para Fahrenheit ficou ' + 
+                        resultado) 
+                break; 
+            default: 
+                document.write('Opçao invalida ') 
+        }
+    </script>
+</body>
+</html>

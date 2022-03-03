@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Mensagem</title> 
+ 
+</head>
+<body>
+    <input type="text" id="teste" value="teste">
+    <input type="text" id="t2">
+
+    <script>  
+        // eu quero salvar essa informação
+        // alert("Aprendendo JavaScript")   
+        var aluno = 'Eder';
+        var curso = 'java'; 
+        
+        const cursoConst = curso;
+
+        curso = "HTML";
+
+      //     document.write("O aluno: " + aluno + " Está cursando: " + curso);
+
+        let valor1 = 1;
+        let valor2 = 2;
+        
+        const resultado = valor1 + valor2; 
+        const resultado2 = 1+2; 
+
+        alert(1+2);
+
+        document.getElementById('teste').value = resultado;
+        document.getElementById('t2').value = curso;
+
+        if (document.getElementById('teste').value != resultado) {
+            document.getElementById('teste').value = 'este elemneto foi alterado';
+        }
+
+        function personagemMorreu (dano, saude) {
+            if (dano >= saude) { 
+                return true; 
+            } else { 
+                return false;
+            }
+        } 
+    </script>
+
+</body>
+</html>

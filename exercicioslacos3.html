@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3 lacos</title>
+</head>
+<body>
+    <script>
+        let votosCandidato1 = 0 
+        let votosCandidato2 = 0 
+        let votosCandidato3 = 0
+        let votosCandidato4 = 0
+        let votosNulos = 0 
+        let opcao 
+
+        do {
+          opcao = parseInt(prompt('Informe o candidato que deseja votar \n' +
+                                '2 - João \n' + 
+                                           '1 - Hans \n' + 
+                                 '3 - Richard \n' + 
+                                    '4 - Patricia \n' + 
+                                    '5 - Sair'))
+
+            switch(opcao) {
+                case 1: 
+                    votosCandidato1++
+                    break; 
+                case 2:
+                    votosCandidato2++
+                    break; 
+                case 3: 
+                    votosCandidato3++
+                    break; 
+                case 4:
+                    votosCandidato4++
+                    break; 
+                default:
+                    votosNulos++
+            }
+        } while (opcao != 5)
+
+        document.write('O Candidato 1 teve ' + votosCandidato1 + ' votos' + '<br>')
+        document.write('O Candidato 2 teve ' + votosCandidato2 + ' votos' + '<br>')
+        document.write('O Candidato 3 teve ' + votosCandidato3 + ' votos' + '<br>')
+        document.write('O Candidato 4 teve ' + votosCandidato4 + ' votos' + '<br>')
+
+
+        let programaContinuaRodando = true
+        while (programaContinuaRodando) {
+            opcao = parseInt(prompt('Informe o candidato que deseja votar \n' +
+                                    '1 - Hans \n' + 
+                                    '2 - João \n' + 
+                                    '3 - Richard \n' + 
+                                    '4 - Patricia \n' + 
+                                    '5 - Sair'))
+
+            switch(opcao) {
+                case 1: 
+                    votosCandidato1++
+                    break; 
+                case 2:
+                    votosCandidato2++
+                    break; 
+                case 3: 
+                    votosCandidato3++
+                    break; 
+                case 4:
+                    votosCandidato4++
+                    break;
+                case 5:
+                    programaContinuaRodando = false
+                    break;
+                default:
+                    votosNulos++
+            }
+        }
+    </script>
+</body>
+</html>

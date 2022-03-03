@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor = 0  
+        let conversao 
+        let resultado = 0
+        let cotacao_dolar = 5.05
+        let cotacao_euro = 5.64
+        
+        do {
+        valor = parseInt(prompt('Informe o valor'))
+        conversao = parseInt(prompt('Informe a conversão \n' + 
+                                 '1 - Real para Dolar \n' + 
+                                 '2 - Dolar para Real \n' + 
+                                 '3 - Real para Euro \n' + 
+                                 '4 - Euro para Real \n' +
+                                 '5 - Sair' ))
+        switch(conversao) { 
+            case 1:
+                resultado = valor / cotacao_dolar; 
+                alert('O valor ' + valor + 
+                        ' convertido para dolar ficou ' + 
+                        resultado) 
+                break; 
+            case 2: 
+                resultado = valor * cotacao_dolar; 
+                document.write('O valor ' + valor + 
+                        ' convertido de dolar para real ficou ' + 
+                        resultado) 
+                break; 
+            case 3: 
+                resultado = valor / cotacao_euro; 
+                document.write('O valor ' + valor + 
+                        ' convertido para euro ficou ' + 
+                        resultado) 
+                break; 
+            case 4: 
+                resultado = valor * cotacao_euro; 
+                document.write('O valor ' + valor + 
+                        ' convertido de euro para real ficou ' + 
+                        resultado) 
+                break; 
+            default: 
+                document.write('Opçao invalida') 
+        } } while (conversao != 5)
+    </script>
+</body>
+</html>
